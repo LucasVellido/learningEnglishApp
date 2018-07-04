@@ -1,0 +1,31 @@
+<div class="container">
+      <div class="jumbotron">
+            <div class="row">
+                  <div class="col-sm-6">
+                        <app-progress [canBeAnotherName]="progress"></app-progress>
+                  </div>
+                  <div class="col-sm-6">
+                        <div class="d-flex justify-content-end">
+                              <app-attempts [attempts]="attempts"></app-attempts>
+                        </div>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col">
+                        <h4>Traduza a frase:</h4>
+                        <h5> {{ roundPhrase.phraseEng }}</h5>
+                        <div class="form-group">
+                              <textarea class="form-control" rows="3" (input)="updateAnswer($event)" [value]="answer"></textarea>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="row">
+                  <div class="col">
+                        <div class="d-flex justify-content-end">
+                              <div class="btn btn-primary" (click)="verifyAnswer()">Verificar</div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
